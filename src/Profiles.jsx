@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import Profile from './Profile';
 
 const Profiles = () => {
@@ -8,10 +8,21 @@ const Profiles = () => {
 			<h3>유저 목록 :</h3>
 			<ul>
 				<li>
-					<Link to="/profiles/kim">kim</Link>
+					<NavLink
+						to="/profiles/kim"
+						activeStyle={{ background: '#000', color: '#fff' }}
+						activeClassName={'active'}
+					>
+						kim
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/profiles/gildong">gildong</Link>
+					<NavLink
+						to="/profiles/gildong"
+						activeStyle={{ background: '#000', color: '#fff' }}
+					>
+						gildong
+					</NavLink>
 				</li>
 			</ul>
 			<Route
